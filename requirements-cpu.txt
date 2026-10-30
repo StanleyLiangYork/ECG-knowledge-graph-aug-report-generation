@@ -1,0 +1,8 @@
+numpy>=1.26,<3
+Pillow>=10,<13
+rouge-score==0.1.2
+nbformat>=5.10,<6
+matplotlib>=3.9,<4
+ipykernel>=6,<8
+# Optional exact-search accelerator: install faiss-cpu separately.
+# GPU and legacy GNN dependencies are deliberately separate.

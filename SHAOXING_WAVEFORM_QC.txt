@@ -1,0 +1,24 @@
+Uploaded local audit: 16,351 unique records, 16,310 ok, 41 invalid. All 41 invalid
+records have 5000x12 shape, 500 Hz, NaNs (2-422), no infinities and are not all zero.
+These counts describe the files supplied; completeness is rechecked on Biowulf.
+
+Upload 12B_freeze_waveform_valid_shaoxing.ipynb and shaoxing_quality_cohort.py
+into graph_reasoning alongside shaoxing_waveform_audit.py. Run 12B in the
+CPU/graph environment with wfdb installed. It resumes the original audit and
+requires completion before excluding Invalid ECG records into a new cohort.
+Missing/changed source files or other decoder errors are not silently excluded.
+No interpolation, source-file edits, label-based selection or replacement sampling.
+
+Original cohort: outputs/real_run_001/shaoxing_external_v1
+New cohort: outputs/real_run_001/shaoxing_external_waveform_qc_v2
+The new directory must not already exist. Preserve the original outputs.
+In the setup cell of EVERY notebook 13 through 17 set:
+EXTERNAL = OUT / 'shaoxing_external_waveform_qc_v2'
+Then rerun notebook 13. The valid waveform audit cache is copied, so validation
+can reuse it after checking current source hashes. Existing embeddings are NOT
+copied or silently assigned a new protocol; encoding restarts for the clean
+cohort with its own provenance and resumes normally after that.
+
+Report waveform-quality exclusions separately from prior malformed-header and
+duplicate exclusions. This QC step does not establish cross-dataset leakage
+control or patient independence. Human review remains necessary.

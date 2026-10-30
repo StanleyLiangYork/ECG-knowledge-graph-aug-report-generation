@@ -1,0 +1,20 @@
+{
+  "mode": "real",
+  "records_path": "/path/to/repository/data/symile_exports/records.json",
+  "targets_path": "/path/to/repository/data/symile_exports/targets.json",
+  "output_dir": "/path/to/repository/outputs/real_run_001",
+  "top_k": 3,
+  "seeds": [
+    43,
+    44,
+    45
+  ],
+  "epochs": 40,
+  "symile_root": "/path/to/data/symile/physionet.org/files/symile-mimic/1.0.0",
+  "export_sources": {
+    "manifest": "/path/to/repository/data/prepared/manifest.json",
+    "embeddings": "/path/to/repository/data/prepared/embeddings.json",
+    "candidates": "/path/to/repository/data/prepared/candidates.json",
+    "annotations": "/path/to/repository/data/prepared/annotations.json"
+  }
+}

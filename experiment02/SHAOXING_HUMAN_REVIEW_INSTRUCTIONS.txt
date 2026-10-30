@@ -1,0 +1,25 @@
+SHAOXING SINGLE-REVIEWER ECG REPORT ASSESSMENT
+
+Purpose and limits
+Assess report fidelity to the displayed 12-lead ECG. This is separate from reviewing the dataset diagnosis-code mapping. Completing these forms does not approve that mapping or remove its evaluation gate. A single reviewer and a later same-reviewer adjudication do not provide independent validation or inter-rater reliability.
+
+Preparation (study coordinator)
+Freeze models, arms, sample size, seed and source-access policy before human assessment. Default: 10 ECGs, ECG-Instruct and Qwen, pool versus graph = 40 reports, calibration only. For a main study choose a fresh version and document the sample-size rationale before preparation. Cases are sampled from jointly successful reports; retain generation coverage and exclusions. Do not select cases for favorable graph performance. Keep PRIVATE inaccessible to the reviewer. If the reviewer also developed the system, disclose that involvement and avoid opening model identities or automatic results during review.
+
+Round 1: independent ECG interpretation
+Download PUBLIC/images, reference_cases_completed.json and this guide. Do not open generated reports, dataset diagnoses, retrieved evidence or PRIVATE. Review every anonymous case, enter reviewer_id, interpretable (true/false), independent_ecg_interpretation and limitations. Leave case_id, image and source_image_sha256 unchanged. Do not guess unreadable findings. Save all entries and upload the completed JSON to the same PUBLIC directory. The image checksum verifies the displayed source; it is not a clinical assessment.
+
+ECG scope
+These are rendered 12-lead waveforms. Check that all lead labels are visible and identify missing, clipped or noisy leads. Describe rhythm and rate when supportable, atrial activity, AV conduction, QRS morphology/conduction, repolarization and QT when measurable, ectopy, pacing, and overall interpretability. You may record abnormalities outside the seven automated mapping categories. State which leads or features support an assertion and distinguish definite, possible and unassessable findings.
+The source waveform was globally amplitude-normalized for generation. Do not assume standard millimetres per millivolt, paper speed or calibrated intervals from the image appearance. Absolute voltage diagnoses (including low voltage or hypertrophy) and interval/rate measurements require adequate calibration information; otherwise mark them unassessable. Do not infer pulmonary disease, laboratory abnormalities, confirmed infarction, etiology or clinical management from retrieved context. This is ECG-image assessment without patient history. An image suggestive of a finding is not independent confirmation of a clinical diagnosis.
+
+Round 2: blinded report assessment
+After every independent interpretation is frozen through BR07A, use BR08 to release anonymous reports. Review each report against the ECG and your frozen interpretation. Do not compare named models or arms. Enter all rating fields; null means not assessed and is not zero. Agreement: agree/disagree/uncertain. Count clinically significant incorrect assertions, clinically significant omissions and minor errors; explain each discrepancy and avoid counting repeated wording as several distinct errors. An omission is a supported finding absent from the report. A plausible but unsupported disease explanation is not established by the ECG.
+Quality: 1 unusable; 2 major corrections; 3 moderate corrections; 4 minor corrections; 5 acceptable unchanged. Flag uninterpretable images explicitly. A normal-sounding report must not automatically receive a good rating when the image cannot support an assessment. Record the actual initial judgment; do not edit the independent reference after seeing the model report.
+Use BR08A for a completed offline rating-form import or BR08 for direct entry. The existing workflow freezes initial ratings and creates a discrepancy/uncertainty adjudication queue.
+
+Later adjudication session: same reviewer
+Use the queue, the same ECG, your frozen independent interpretation and the initial report rating. Recheck the evidence; do not revise merely to agree with the generator. Choose retain_initial, revise_initial or unresolved. Supply a clinical reason and describe evidence reviewed. For revise_initial supply the complete final rating. For retain_initial the workflow preserves the initial rating; unresolved remains unresolved. If your initial interpretation was mistaken, explain the correction in adjudication rather than overwriting the reference. Retain original and adjudicated outcomes separately. Upload adjudications_completed.json and import with BR08B. BR09 analyzes the completed package.
+
+Reporting
+Report the number of ECGs, reports, unique recorded patient IDs, failures excluded before sampling, unassessable cases and unresolved decisions. Keep calibration separate from main results. Describe the assessment as single-reviewer with same-reviewer adjudication; no inter-rater agreement statistic. Clinical review cannot establish patient outcomes or causal graph reasoning.

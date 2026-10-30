@@ -1,0 +1,6 @@
+numpy
+Pillow
+rouge-score
+nbformat
+# Optional acceleration (install separately in a compatible CPU environment): faiss-cpu
+# GPU model dependencies use the existing model-specific virtual environments.

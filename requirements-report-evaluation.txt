@@ -1,0 +1,2 @@
+# Install only in the graph/evaluation environment; leave PULSE/MedGemma untouched.
+rouge-score==0.1.2

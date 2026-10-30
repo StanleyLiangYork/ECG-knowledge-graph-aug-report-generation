@@ -1,0 +1,49 @@
+Experiment 4/e4_bridge.py reads existing features/<split>/ecg_hubert.npy.
+Original executable encoder and preprocessing found in:
+notebook2/03_encode_ecg_hubert.ipynb
+Original model configuration found in:
+notebook2/00_environment_and_configuration.ipynb
+Model: Edoardo-BS/hubert-ecg-base
+
+Upload notebook 13 and shaoxing_hubert_adapter.py beside existing helpers.
+Use the original HuBERT virtual environment with CUDA, torch, transformers,
+numpy and wfdb. Do not use the old PULSE environment just because it loads PULSE.
+Restart the kernel and run all cells. No checkpoint download is performed.
+
+ARTIFACT_ROOT defaults to:
+/path/to/data/symile/ecg_cxr_bridge_artifacts
+Its config.json supplies hubert_model_id and hf_cache. Typical cache path:
+/path/to/data/hf_cache/models--Edoardo-BS--hubert-ecg-base/snapshots/<commit>
+The commit must be discovered on Biowulf, not guessed. If multiple revisions
+exist, set SNAPSHOT_PATH to the original snapshot. Configs pointing to a different
+model fail rather than substituting another encoder. Local custom model code is
+loaded using trust_remote_code=True, matching the original encoder notebook.
+
+Preprocessing exactly reproduces the earlier notebook's hubert_input function:
+per-lead z-score over 5000 time points; std below 1e-6 replaced by 1;
+nan_to_num; canonical lead order; concatenate leads into 60000 samples;
+CUDA float16 inference; mean last hidden state; float32 output.
+No projection, refitting or embedding normalization.
+
+CHECKPOINT_PATH now points to a fingerprint manifest covering local checkpoint
+files, including weight shards and custom code, rather than one arbitrary shard.
+The actual snapshot path is printed separately. The existing encoding helper
+hashes this manifest for provenance; the adapter verifies its file hashes.
+
+Ten seeded training-bank records are re-encoded from their sensor_sources.json
+waveforms and compared directly with frozen records.json embeddings. Maximum
+relative L2 error 0.005 and minimum cosine 0.99999 must both pass. A match is
+numerical evidence on this probe sample, not proof of historical training origin.
+Do not bypass a failed check. Review hubert_bank_equivalence.json instead.
+Successful verification is cached against bank/source/adapter/checkpoint hashes.
+Existing per-ECG output checkpointing supports interruption/restart.
+Preserve EXTERNAL from notebook 12 and keep the graph/config unchanged.
+
+PATH FIX: verification now reads <CONFIG.symile_root>/data_npy/train/ecg_train.npy
+and hadm_id_train.npy. sensor_sources.json source_path is a WFDB provenance
+identifier and is NOT a NumPy file. source_index selects the tensor row; its
+admission is checked against both sensor metadata and the frozen bank. Tensor
+and admission-array hashes are included in the verification audit. Restart the
+kernel after uploading this update and rerun notebook 13. No change to the
+checkpoint descriptor or frozen graph is required. No external features were
+produced by the failed verification.

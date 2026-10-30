@@ -1,0 +1,39 @@
+# Local settings, credentials and environments
+config.json
+.env
+.env.*
+!.env.example
+*token*
+.venv*/
+venvs/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+# Research data and derived patient-level artifacts
+outputs/
+data/
+LLM_outputs/
+Shaoxing/
+PUBLIC/
+PRIVATE/
+reference_drafts/
+rating_drafts/
+adjudications/
+*.jsonl
+*.npy
+*.npz
+*.mat
+*.hea
+*.dat
+*.dcm
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.lock
+*.log
+# Local caches and validation artifacts
+.cache/
+hf_cache/
+validation_reports/

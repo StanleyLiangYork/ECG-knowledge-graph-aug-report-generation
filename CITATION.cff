@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite this repository and the commit used; manuscript publication metadata are pending."
+title: "Knowledge graph-based multimodal augmentation for electrocardiogram report generation"
+type: software
+authors:
+  - family-names: Liang
+    given-names: Stanley
+repository-code: "https://github.com/StanleyLiangYork/ECG-knowledge-graph-aug-report-generation"
+license: MIT

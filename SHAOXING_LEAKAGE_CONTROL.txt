@@ -1,0 +1,38 @@
+Upload notebook 12 and shaoxing_external.py, restart the kernel, and rerun.
+The earlier duplicate error occurred before cohort_protocol.json was written;
+that failed output directory can therefore be reused. If it contains a frozen
+cohort_protocol.json, choose a new EXTERNAL directory consistently in subsequent
+notebooks. Do not delete or overwrite a previously frozen cohort.
+
+Order: inventory all headers -> validate -> hash waveform files -> exclude all
+exact duplicate groups -> exclude optional cross-source matches -> random sample
+-> freeze cohort. Sampling uses seed 43 and no labels. Duplicate groups are
+excluded entirely, avoiding arbitrary choices when patient identity, calibration
+or diagnoses differ. This conservative policy can reduce representativeness;
+report counts and reasons in the manuscript. No raw files are deleted.
+
+DUPLICATE_POLICY='exclude_all' explicitly permits group exclusions.
+DUPLICATE_POLICY='error' writes the audit and stops if duplicates exist.
+INVALID_HEADER_POLICY='exclude' records malformed-header exclusions separately.
+MAX_RECORDS=0 includes every eligible record. A positive value samples only after
+exclusions; requesting more than eligible records raises an error.
+Audit files: header_validation_audit.json, duplicate_waveforms.json,
+leakage_audit.json. Frozen cohort protocol signs the audit contents.
+
+This is EXACT FILE-BYTE duplicate control. It does not detect the same waveform
+stored in another format, near-duplicates, repeat ECGs from the same patient,
+or overlap with pretraining datasets. Distinct records are not proven distinct
+patients. Maintain frozen training/reference banks and do not adapt on Shaoxing.
+
+Optional cross-dataset exact-file screen: supply REFERENCE_HASHES_PATH pointing
+to a JSON object with algorithm='sha256_file_bytes', source_description describing
+the source coverage (training/validation/test/reference bank), and hashes listing
+SHA256 digests computed from ORIGINAL waveform FILE BYTES. Do not substitute
+embedding hashes, tensor hashes, or file names. The audit records the supplied
+inventory's hash and description. Only exact matches are excluded; different
+storage formats require a separate normalized-waveform comparison. With None,
+'cross_dataset_screening' is explicitly NOT_PERFORMED. This update must not be
+reported as proof of no cross-dataset leakage or patient independence.
+
+The full inventory is read before sampling, which can take longer on shared
+storage. Do not start downstream inference until the audits and cohort complete.
