@@ -262,7 +262,7 @@
   {
     "path": "experiment02/BR08B_import_completed_adjudications.ipynb",
     "source_sha256": "1ba66054bc98e3e5e27edadeb5a00bd11d9948f514059cd1417f37c6d33148f6",
-    "release_sha256": "8d3c9adbcc5901de874fc2e1a4d587de473a4f219ae33db448254e458f312b27"
+    "release_sha256": "a977039e5abad2141d07ab10e2e9c8930a052bd692100191ca14765ad08699d6"
   },
   {
     "path": "experiment02/test_k_sensitivity_extension.py",
@@ -287,7 +287,7 @@
   {
     "path": "experiment02/BR08C_export_all_adjudication_forms.ipynb",
     "source_sha256": "1b3f723f198f5d484abbfb56be2e2df9c1af1425d80890b71f80ba0551350a8b",
-    "release_sha256": "5f8ee621cd9d5c999caf2dad9ed602033c00b760ed7289b55e83b6068ba32d0b"
+    "release_sha256": "187f3c19b94f905393f5185f6ff8654c7bd4fb234cbae59948a64fc99e23bef0"
   },
   {
     "path": "experiment02/generation.py",
@@ -327,12 +327,12 @@
   {
     "path": "experiment02/BR09_analyze_single_reviewer_clinical_results.ipynb",
     "source_sha256": "6980dcd36e079ef578ddd99b7d2326a703a9394d5ff0ff77c111bbfcec9c45fc",
-    "release_sha256": "7db53b6d525aa0e96f9586cb164620ee8718e569d46e64115ee3a0f4861c5092"
+    "release_sha256": "c18d6d66aea9b1d65b20e9e3bd62e8cda80822e29c4b3f8631cebede4ba853b2"
   },
   {
     "path": "experiment02/BR08D_import_exported_adjudications.ipynb",
     "source_sha256": "baeae18080cdc386d25aa572cb69ad06ffb1e8d433a200104b23cd70028e6803",
-    "release_sha256": "04903435753b9c477515387fc3860ce1641677de90c55a8e3b693cab090f7096"
+    "release_sha256": "23b574138aad494c3a50de05d7891b46a348da1bb979d07faa32edc1646b99dc"
   },
   {
     "path": "experiment02/LEAKAGE_CONTROLS_README.md",
@@ -347,7 +347,7 @@
   {
     "path": "experiment02/test_report_rating_import_notebook.py",
     "source_sha256": "16626290d2e92bb8fd9a105a1911e66422fa4d7dc323b1fabb5d4f8c8ce8921c",
-    "release_sha256": "16626290d2e92bb8fd9a105a1911e66422fa4d7dc323b1fabb5d4f8c8ce8921c"
+    "release_sha256": "865d1c7b9f862db38e32fb7eed5d5c3d6cc3778f3cdf4f646c62b0d71b912c34"
   },
   {
     "path": "experiment02/evaluation.py",
@@ -357,7 +357,7 @@
   {
     "path": "experiment02/BR08BS_import_shaoxing_adjudications.ipynb",
     "source_sha256": "2b1fcfb8b9650473bf8e442745eebc9340cee6304f0102932e18a4b01a45ff40",
-    "release_sha256": "ea85ea6cd30a30cc1772b941e93b800233b1d901cf79da296348e110c302f570"
+    "release_sha256": "a2e426c71e9e11ac6b8f1d44120c869b07a1e86cc88beccf0895baba845824b7"
   },
   {
     "path": "experiment02/test_cxr_recovery_extension.py",
@@ -417,12 +417,12 @@
   {
     "path": "experiment02/BR07_prepare_single_reviewer_clinical_study.ipynb",
     "source_sha256": "7273f8bf8ca91bc9b2eb8983dc865d3359bd0d77c6f0c7b7b437f99534fa0002",
-    "release_sha256": "74ad538f754f8442398b2f776327dbe08064608bf9c428f67890791bc3b4330f"
+    "release_sha256": "3ed07776ef9e54b71df0ae85f3e20aeaaada5bbfb080985febe26b5c614b5411"
   },
   {
     "path": "experiment02/BR08_single_reviewer_assessment_and_adjudication.ipynb",
     "source_sha256": "0d6f73ba2399bdc62f6ab9b989ff081f826d17792343275c96c7e10e37f82c73",
-    "release_sha256": "f89f8b4d8647ba97c2c5c31dd25159b850fd205c7909813f5c0f8aa88a981875"
+    "release_sha256": "1e2115f5ade754182297b5ab18315b38e0437457d2d8c640f9f2f9f11d841360"
   },
   {
     "path": "experiment02/RAD_RECHECK_README.txt",
@@ -467,7 +467,7 @@
   {
     "path": "experiment02/BR08S_create_shaoxing_rating_form.ipynb",
     "source_sha256": "20c24cf68f1e141ec5d3af6474ce7846817c0561563efe62b10a76d30f99e046",
-    "release_sha256": "763d9530ad0d5f3079dd96061cce7b6b4e33154344e6685cedff24d9e0177d5d"
+    "release_sha256": "f4e8108f177e1b3f10fab1503cf3717f98cd25b17268b38257c358c0c784dbf3"
   },
   {
     "path": "experiment02/test_context_fit_extension.py",
@@ -497,7 +497,7 @@
   {
     "path": "experiment02/BR08A_import_completed_report_ratings.ipynb",
     "source_sha256": "b714592f18dedb6a86b65e3ea8336338478127a750158c372ab19eca49415941",
-    "release_sha256": "1b0eb42ecc56d9fd4e97922887b7febd0e3a7d22a4d6ef60387df12340bfbaa7"
+    "release_sha256": "49f48252a5a80e2d4b7ae3b3dc3787532560351bb838edb6487ac6f1164fdb81"
   },
   {
     "path": "experiment02/K_SENSITIVITY_README.md",
@@ -537,7 +537,7 @@
   {
     "path": "experiment02/BR08AS_import_shaoxing_report_ratings.ipynb",
     "source_sha256": "058dfd1f46a442a0b7f3ee9f0277280d198111868413f2c06ebf4b331e38b84f",
-    "release_sha256": "1cbfbf251bd0fdb0e0a30b8a4b06e341363b26ce1e6a2ca1be07fce3ba8ca783"
+    "release_sha256": "22e4f7da5d305c968901a3ec7d40c1c9b6ccc268492e88b934efdd646a7ad735"
   },
   {
     "path": "experiment02/BR05A_rendering_provenance_and_within_generator_evaluation.ipynb",
@@ -547,7 +547,7 @@
   {
     "path": "experiment02/BR07S_prepare_shaoxing_single_reviewer_package.ipynb",
     "source_sha256": "1c8460288cae99248e5f5d3ef076987898402820d9560ac719d89cbf448cd601",
-    "release_sha256": "7396f34b5155568f3479d017487a5b7678fb42d805acc20a439602ebd1ff3476"
+    "release_sha256": "eeb6543a436adbb57ef2c49d997b3bd674e7addd06652014256e39add91aac98"
   },
   {
     "path": "experiment02/retrieval_metrics.py",
@@ -562,7 +562,7 @@
   {
     "path": "experiment02/BR07A_import_completed_reference_reviews.ipynb",
     "source_sha256": "baf777e1b284e50aafe3c5c921bac66dbf0bede69fafb913a25576c9da437dbb",
-    "release_sha256": "d5b8e5233bde7dd6a593801f4a25dc2006deada452d6fb05fa48c7979a3e7cb0"
+    "release_sha256": "30b20ff351e324bcdc1c5e448f578fbac22766d741117b66051ebac7446f7e33"
   },
   {
     "path": "experiment02/BR01B_extract_mimic_cxr_candidates.ipynb",
@@ -572,7 +572,7 @@
   {
     "path": "experiment02/test_adjudication_import_notebook.py",
     "source_sha256": "ea7bbe5f42c31d448ca445800c86f824b6f4d4017b5e5fa74e2ea4b8994ffbc3",
-    "release_sha256": "ea7bbe5f42c31d448ca445800c86f824b6f4d4017b5e5fa74e2ea4b8994ffbc3"
+    "release_sha256": "c2b6512b5cd05419328c0c38340f0cab4bbe412d3de7554e231e3377427075cb"
   },
   {
     "path": "experiment02/test_clinical_archived_inputs.py",
@@ -623,5 +623,15 @@
     "path": "experiment02/human_review/import_reference_cases.py",
     "source_sha256": "bdc9613f5f445de00a39a1b3c5c47160ae514c90b936f200616ded2362eed109",
     "release_sha256": "63e5bc14d373d7b6a6f3a39458fcc48e6e832d40ec99c7fb0b70c8f3b93e2406"
+  },
+  {
+    "path": "experiment02/clinical_review/workflow.py",
+    "source_sha256": "4d9c4bc27c48712a383cbfd892b98dce59ff78e78a3c9f5dfda36f04cf1f5fe3",
+    "release_sha256": "4d9c4bc27c48712a383cbfd892b98dce59ff78e78a3c9f5dfda36f04cf1f5fe3"
+  },
+  {
+    "path": "experiment02/clinical_review/archived_inputs.py",
+    "source_sha256": "3af9f1ae471e7e9123efb8a32db643197c664ede57e7591f8be0a7bee59f2e69",
+    "release_sha256": "3af9f1ae471e7e9123efb8a32db643197c664ede57e7591f8be0a7bee59f2e69"
   }
 ]

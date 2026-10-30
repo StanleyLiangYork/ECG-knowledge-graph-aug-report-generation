@@ -16,6 +16,8 @@ from clinical_review import workflow as w
 ROOT = Path(__file__).parent
 
 
+@unittest.skipUnless((ROOT / 'human_review/PUBLIC/images').is_dir(),
+                     'Private historical review fixtures are not distributed')
 class AdjudicationImportTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory(); self.addCleanup(self.tmp.cleanup)

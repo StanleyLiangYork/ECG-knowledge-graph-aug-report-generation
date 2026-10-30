@@ -49,9 +49,9 @@ BR02 → BR03 → BR03A → BR04B → BR05A Section A.
 
 The manuscript external base-Llama analysis uses the later `nonthinking_t1024` run. Preserve but exclude its earlier `nonthinking_t384` run. PULSE and ECG-Instruct retain 384; Qwen retains 1,024. This difference is part of the protocol and must be disclosed.
 
-## Human review (original helper package currently missing)
+## Human review
 
-Do not run this route until `experiment02/clinical_review` is restored from the original study implementation. The available notebooks and import helper are preserved without participant records.
+The original `experiment02/clinical_review` helpers and import notebooks are included. Supply your own completed generation artifacts and clinician assessments; participant records are not distributed.
 
 BR07 (internal) or BR07S (external) → BR07A independent-interpretation import → BR08 report release → BR08S rating-form export (external) → BR08A/BR08AS rating import → BR08C adjudication-form export → BR08B/BR08BS/BR08D matching import → BR09 analysis.
 

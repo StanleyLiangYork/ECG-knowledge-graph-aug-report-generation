@@ -4,7 +4,7 @@ Companion research code for the manuscript **Knowledge graph-based multimodal au
 
 An ECG query retrieves aligned ECG–CXR–laboratory reference admissions from Symile. Their CXR embeddings retrieve MIMIC-CXR references. Reverse retrieval checks consistency with the query ECG, and a training-derived co-occurrence graph supports reference ranking and attributed prompt context. Frozen generators produce ECG reports under five matched prompting arms.
 
-**Release status:** source-code release with CPU tests and sanitized notebook templates. Real-data replication requires separately obtained datasets, encoder features, checkpoint revisions and frozen preparation artifacts. The original `clinical_review/` helper package was absent from the supplied files: clinical-review notebooks are included but currently **cannot run end to end**. See [reproducibility status](docs/REPRODUCIBILITY.md). No patient data, reports, reviewer records or model weights are included.
+**Release status:** source-code release with CPU tests and sanitized notebook templates. Real-data replication requires separately obtained datasets, encoder features, checkpoint revisions and frozen preparation artifacts. The original `clinical_review/` helpers are included for package preparation, independent interpretation, report ratings, same-reviewer adjudication and analysis. See [reproducibility status](docs/REPRODUCIBILITY.md). No patient data, reports, reviewer records or model weights are included.
 
 ## Methods in brief
 
