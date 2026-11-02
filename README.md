@@ -1,6 +1,28 @@
 # Knowledge graph-based multimodal augmentation for electrocardiogram report generation
 
+**Authors:** Zhaohui Liang, Niccolo Marini, Sivaramakrishnan Rajaraman, Zhiyun Xue and Sameer Antani*
+
+Division of Intramural Research (DIR), National Library of Medicine (NLM), National Institutes of Health (NIH), Bethesda, MD, USA
+
+\* Corresponding author.
+
 Companion research code for the manuscript **Knowledge graph-based multimodal augmentation for electrocardiogram report generation**.
+
+## Abstract
+
+### Aims
+
+Retrieval-augmented language models can draft electrocardiogram reports, but added reference material may help or distract and is rarely traceable. We evaluated whether organizing multimodal reference context with a training-derived knowledge graph improves recovery of documented electrocardiogram diagnoses across generators.
+
+### Methods and results
+
+An electrocardiogram-only query retrieved admission-aligned electrocardiogram, chest radiograph and laboratory findings from other patients; a frozen co-occurrence graph guided reference selection and supplied attributed associations. Five prompting arms, from no retrieved context to graph-supported and concept-shuffled context, were tested in four vision-language report generators, two fine-tuned on electrocardiogram data and two general-purpose, on 750 internal and 1,000 external electrocardiograms. Relative to retrieval without the graph, graph augmentation increased an internal finding-recovery score by 0.04 and 0.11 in the general-purpose generators and increased external recall of documented diagnoses in all four generators by 3.9 to 7.2 percentage points, each significant after correction for multiple comparisons. Gains over generation without retrieved context were small for the fine-tuned generators, and the original graph did not outperform the shuffled control. A human reviewer with 11 years of clinical experience assessed 160 reports: clinically significant errors decreased for some generators, omissions and acceptability changed inconsistently, and most reports required modification.
+
+### Conclusion
+
+Knowledge graph-based organization of multimodal reference context improved recovery of documented electrocardiogram diagnoses relative to retrieval alone and made the evidence behind generated statements inspectable; the value of the specific associations and clinical benefit remain unproven. The approach suits drafting support under physician over-read, pending a blinded multi-reader study.
+
+## Code overview
 
 An ECG query retrieves aligned ECG–CXR–laboratory reference admissions from Symile. Their CXR embeddings retrieve MIMIC-CXR references. Reverse retrieval checks consistency with the query ECG, and a training-derived co-occurrence graph supports reference ranking and attributed prompt context. Frozen generators produce ECG reports under five matched prompting arms.
 
